@@ -1,5 +1,5 @@
-def Calc(shape:String, firstDimension:Int, secondDimension:Int, area:(Int,Int)=>Int):String = {
-  val areaResult = area(firstDimension,secondDimension)
+def calculateArea(shape: String, firstDimension: Double, secondDimension: Double, area: (Double, Double) => Double): String = {
+  val areaResult = area(firstDimension, secondDimension)
   shape match {
     case "Rectangle" => s"Area of Rectangle is $areaResult"
     case "Rhombus" => s"Area of Rhombus is $areaResult"
@@ -8,7 +8,7 @@ def Calc(shape:String, firstDimension:Int, secondDimension:Int, area:(Int,Int)=>
   }
 }
 
-Calc("Rectangle", 10, 20, (first,second) => first*second )
-Calc("Rhombus", 15, 30, (first,second) => first*second )
-Calc("Parallelogram", 5, 25, (first,second) => first*second )
-Calc("Square", 4, 4, (first,second) => first*second )
+calculateArea("Rectangle", 10, 20, (firstDimension, secondDimension) => firstDimension * secondDimension)
+calculateArea("Rhombus", 15, 30, (firstDimension, secondDimension) => firstDimension * secondDimension)
+calculateArea("Parallelogram", 5, 25, (firstDimension, secondDimension) => firstDimension * secondDimension)
+calculateArea("Square", 4, 4, (firstDimension, secondDimension) => firstDimension * secondDimension)
